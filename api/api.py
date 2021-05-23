@@ -73,4 +73,5 @@ def get_new_rules_from_recommender(data):
     new_rules = recommender.get_new_rules(trigger_rules).loc[0:9]
     return pred, new_rules
 
-app.run()
+if __name__ == "__main__":
+	app.run()
