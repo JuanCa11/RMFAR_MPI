@@ -8,9 +8,10 @@ from preprocess.utils import dict_transpose
 from preprocess.settings import WILDCARDS, SANITY_MSG, PARSE_MONTH
 
 app = flask.Flask(__name__)
-cors = CORS(app)
 app.config["DEBUG"] = True
-
+app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy dog'
+app.config['CORS_HEADERS'] = 'Content-Type'
+cors = CORS(app, resources={r"/api/recomendaciones": {"origins": "http://localhost:8000"}})
 
 @app.route('/', methods=['GET'])
 @cross_origin()
@@ -19,7 +20,7 @@ def home():
 
 
 @app.route('/api/recomendaciones', methods=['GET'])
-@cross_origin()
+@cross_origin(origin='localhost',headers=['Content- Type','Authorization'])
 def recomendations():
     data_dict = request.args.to_dict(flat=True)
     response = recomendation_process(data_dict)
