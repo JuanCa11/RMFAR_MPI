@@ -2,7 +2,7 @@ import flask
 import pickle
 from flask import jsonify
 from flask import request
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 from preprocess.preprocess import Preprocess
 from preprocess.utils import dict_transpose
 from preprocess.settings import WILDCARDS, SANITY_MSG, PARSE_MONTH
@@ -13,11 +13,13 @@ app.config["DEBUG"] = True
 
 
 @app.route('/', methods=['GET'])
+@cross_origin()
 def home():
     return "<h1>Distant Reading Archive</h1><p>This site is a prototype API for distant reading of science fiction novels.</p>"
 
 
 @app.route('/api/recomendaciones', methods=['GET'])
+@cross_origin()
 def recomendations():
     data_dict = request.args.to_dict(flat=True)
     response = recomendation_process(data_dict)
