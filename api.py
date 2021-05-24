@@ -73,7 +73,11 @@ def get_new_rules_from_recommender(data):
 
     pred = recommender.predict_proba(raw_data)
     trigger_rules = recommender._trigger_rules
-    new_rules = recommender.get_new_rules(trigger_rules).loc[0:9]
+    new_rules = recommender.get_new_rules(trigger_rules)
+    if len(new_rules)>0:
+        new_rules = new_rules.loc[0:9]
+    else:
+        new_rules = []
     return pred, new_rules
 
 if __name__ == "__main__":
