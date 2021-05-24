@@ -64,7 +64,7 @@ def recomendation_process(data):
 
 
 def get_new_rules_from_recommender(data):
-    with open('api/pickles/recommenderV1.pickle', 'rb') as handle:
+    with open('pickles/recommenderV1.pickle', 'rb') as handle:
         recommender = pickle.load(handle)
 
     preprocess = Preprocess()

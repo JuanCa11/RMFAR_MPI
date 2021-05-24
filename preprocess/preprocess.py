@@ -8,8 +8,8 @@ from datetime import datetime
 
 class Preprocess():
     def __init__(self) -> None:
-        self._df_barrios_info = pd.read_csv("api/datasets/barrios_info.csv")
-        self._dataset = pd.read_csv('api/datasets/dataset.csv')
+        self._df_barrios_info = pd.read_csv("datasets/barrios_info.csv")
+        self._dataset = pd.read_csv('datasets/dataset.csv')
     
     def preprocess_data(self, data):
 
