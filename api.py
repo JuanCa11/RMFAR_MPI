@@ -48,11 +48,11 @@ def recomendation_process(data):
         new_item = new_item if feature_wildcard != 'MES' else PARSE_MONTH[new_item]
         if new_item:
             si = f"{SANITY_MSG[feature_wildcard]} {old_item}"
-            luego = f'{new_item}'
+            luego = f'{SANITY_MSG[feature_wildcard]} {new_item}'
             #msg = f"Si usted cambia {SANITY_MSG[feature_wildcard]} {old_item} por {new_item}"
         else:
             si = f"{SANITY_MSG[feature_wildcard]} {old_item}"
-            luego = f"{SANITY_MSG[feature_wildcard]}"
+            luego = f"cualquier {SANITY_MSG[feature_wildcard]}"
             #msg = f"Si usted cambia {SANITY_MSG[feature_wildcard]} {old_item} por cualquier {SANITY_MSG[feature_wildcard]}"
         dict_rec['if'] = si
         dict_rec['then'] = luego
