@@ -11,7 +11,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy dog'
 app.config['CORS_HEADERS'] = 'Content-Type'
-cors = CORS(app, resources={r"*": {"origins": "*}})
+cors = CORS(app, resources={r"*": {"origins": "*"}})
 
 @app.route('/', methods=['GET'])
 @cross_origin()
