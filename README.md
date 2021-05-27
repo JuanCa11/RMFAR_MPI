@@ -30,7 +30,7 @@ Usage
     {
       "if": " BARRIO MUY PEQUEÑO", 
       "score": 0.1456317844072873, 
-      "then": " BARRIO PEQUE\u00d1O"
+      "then": " BARRIO PEQUEÑO"
     }, 
     {
       "if": "IR O ESTAR EN EL MES DE JUNIO", 
@@ -60,7 +60,7 @@ Usage
     {
       "if": "IR O ESTAR EN EL/LA NOCHE", 
       "score": 0.5436515249778486, 
-      "then": "IR O ESTAR EN EL/LA MA\u00d1ANA"
+      "then": "IR O ESTAR EN EL/LA MAÑANA"
     }, 
     {
       "if": "BARRIO CON DENSIDAD BANCARIA ALTA", 
