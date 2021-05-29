@@ -1,4 +1,4 @@
-# MPI RMFAR Demo
+# MPI RMFAR
 Usage
 -----
 
