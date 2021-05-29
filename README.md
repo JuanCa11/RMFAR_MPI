@@ -1,4 +1,4 @@
-# Flask-RESTful API RMFAR Demo
+# MPI RMFAR Demo
 Usage
 -----
 
