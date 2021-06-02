@@ -1,4 +1,4 @@
-# MPI RMFAR
+# REST API RMFAR
 Usage
 -----
 
